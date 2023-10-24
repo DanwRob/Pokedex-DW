@@ -1,0 +1,39 @@
+
+.table{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+  }
+  
+  td {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+  }
+  
+  .navegation {
+    display: flex;
+    flex-direction: column;
+  }
+  .navegation i {
+    padding: 3px 0px;
+  }
+  .navegation button {
+    padding: 11px 25px;
+    color: #ffffff;
+    margin: 0 10px;
+    background: #0069d9;
+    border-radius: 24px;
+    border: 0;
+    transition: 0.5s ease-out;
+    animation-name: opacity;
+    animation-duration: 4s;
+  }
+  .navegation button:hover {
+    background: #034285;
+  }
+  .navegation button:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+  }

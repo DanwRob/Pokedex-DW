@@ -1,0 +1,19 @@
+.type-image{
+    width:30px;
+    height: 30px;
+  }
+
+.types{
+    display: inline;
+    padding-left: 10px;
+}
+
+.header{
+    display: flex;
+}
+
+.card{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,40 @@
+<div class="card ">
+    <div class="card-body {{pokemonInfo.types[0].type.name}}">
+        <div class="header">
+            <h2>#{{pokemonInfo.id}} {{pokemonInfo.name}}</h2>
+            <div class="types" *ngFor="let type of pokemonInfo.types">
+                <span class="{{type.type.name}} badge border border-secondary-subtle rounded-pill" >
+                    <img class="{{type.type.name}} type-image rounded-circle me-1" src="assets/img/icon/{{type.type.name}}.svg" alt="type">
+                </span>   
+            </div>
+        </div>
+        
+        <div class="description">
+            <p>{{description}}</p>
+        </div>
+
+
+        <p>Height: {{pokemonInfo.height}}</p>
+        <p>Weight: {{pokemonInfo.weight}}</p>
+
+
+        <div *ngFor="let stat of pokemonInfo.stats"> 
+            <p>{{stat.stat.name}}: {{stat.base_stat}}</p>
+        </div>
+        <div>
+            <img src="{{pokemonInfo.sprites.front_default}}">
+            <img src="{{pokemonInfo.sprites.back_default}}">
+        </div>
+        <div *ngIf="pokemonInfo.sprites.front_female !== null">
+            <img src="{{pokemonInfo.sprites.front_female}}">
+            <img src="{{pokemonInfo.sprites.back_female}}">
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-outline-secondary" 
+            style="width: 80px;" 
+            (click)="onBack()">
+            <i class="fa fa-chevron-left"></i> Back
+        </button>
+    </div>
+</div>

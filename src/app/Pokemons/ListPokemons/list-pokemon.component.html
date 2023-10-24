@@ -1,0 +1,18 @@
+<div class="card {{pokemon.types[0].type.name}}">
+    <div class="card-body {{pokemon.types[0].type.name}}">
+        <img class="card-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{fixPokemonId(pokemon.id)}}.png" alt={{pokemon.name}}>
+        <h5 class="pokemon-number">#{{fixPokemonId(pokemon.id)}} </h5>
+        <h1 class="pokemon-name">{{pokemon.name}}</h1>
+        <div class="pokemon-type">
+            <div class="badge-type" *ngFor="let type of pokemon.types">
+                <span class="{{type.type.name}} badge border border-secondary-subtle rounded-pill" >
+                    <img class="{{type.type.name}} type-image rounded-circle me-1" src="assets/img/icon/{{type.type.name}}.svg" alt="type">
+                    {{type.type.name}}
+                </span>
+            </div>
+        </div>
+        <div class="pokemon-summary">
+            <button class="btn btn-primary" [routerLink]="['/pokemons', pokemon.id]">Details</button>
+        </div>
+    </div>
+</div>
